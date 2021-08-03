@@ -1,0 +1,1 @@
+SELECT * FROM "Orders" where country_name is "Taiwan";

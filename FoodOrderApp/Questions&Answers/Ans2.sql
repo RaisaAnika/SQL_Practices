@@ -1,0 +1,1 @@
+SELECT country_name, sum (gmv_local)  as 'total_gmv' FROM "Orders" group by "country_name" ORDER BY total_gmv DESC;

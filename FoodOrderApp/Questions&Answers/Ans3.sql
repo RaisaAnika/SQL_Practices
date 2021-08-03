@@ -1,0 +1,1 @@
+SELECT country_name, vendor_name, max(total_gmv) as total_gmv from ( Select  Orders.country_name, Vendors.vendor_name, Round(sum(Orders.gmv_local),2)  as total_gmv  FROM Orders  INNER JOIN Vendors ON Vendors.id = Orders.vendor_id where Vendors.is_active = "TRUE"  GROUP By Vendors.vendor_name )  GROUP BY country_name ORDER BY country_name;
